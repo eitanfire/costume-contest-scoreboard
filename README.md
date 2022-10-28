@@ -1,0 +1,1 @@
+# costume-contest-scoreboard

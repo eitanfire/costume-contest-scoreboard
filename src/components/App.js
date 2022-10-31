@@ -9,22 +9,62 @@ class App extends Component {
       {
         name: "Henri",
         score: 0,
-        id: 1
+        id: 1,
+        song:   
+          <div className='songLink'>
+          <a
+          role='button'
+          className='btn'
+          // Walk on song
+          href='' 
+          target="_blank" rel="noopener noreferrer">🎵
+        </a>
+        </div>
       },
       {
         name: "Treasure",
         score: 0,
-        id: 2
+        id: 2,
+        song:   
+          <div className='songLink'>
+          <a
+          role='button'
+          className='btn'
+          // Walk on song
+          href='' 
+          target="_blank" rel="noopener noreferrer">🎵
+        </a>
+        </div>
       },
       {
         name: "Ashley",
         score: 0,
-        id: 3
+        id: 3,
+        song:   
+          <div className='songLink'>
+          <a
+          role='button'
+          className='btn'
+          // Walk on song
+          href='' 
+          target="_blank" rel="noopener noreferrer">🎵
+        </a>
+        </div>
       },
       {
         name: "James",
         score: 0,
-        id: 4
+        id: 4,
+        song:   
+          <div className='songLink'>
+          <a
+          role='button'
+          className='btn'
+          // Walk on song
+          href='' 
+          target="_blank" rel="noopener noreferrer">🎵
+        </a>
+        </div>
       }
     ]
   };
@@ -101,6 +141,7 @@ class App extends Component {
           <Player 
             name={player.name}
             score={player.score}
+            song={player.song}
             id={player.id}
             key={player.id.toString()} 
             index={index}

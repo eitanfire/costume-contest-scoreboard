@@ -256,3 +256,15 @@ svg {
     max-width: 42%;
     height: auto;
   }
+
+  .songLink {
+    font-size: 2rem;
+    position: absolute;
+    text-indent: 20rem;
+    padding-top: .5rem;
+  }
+
+  .songLink:after {
+    font-size: 1rem;
+    background-color: #E55B13;
+  }

@@ -29,4 +29,4 @@ class AddPlayerForm extends Component {
   }
 }
 
-export default AddPlayerForm;
+// export default AddPlayerForm;

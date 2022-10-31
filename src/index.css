@@ -5,6 +5,7 @@ body {
   text-transform: uppercase;
   font-weight: 400;
   /* font-size: 1.5rem; */
+  margin-top: -4rem;
 }
 
 header {
@@ -90,8 +91,8 @@ svg {
 
 .is-high-score {
   fill: #FFC657;
-  animation: grow 0.35s ease-in-out;
-  transform-origin: 50% 50%;
+  animation: grow 10s ease-in-out;
+  transform-origin: 100% 100%;
 }
 
 @keyframes grow {
@@ -103,7 +104,7 @@ svg {
   background: #fff;
   width: 700px;
   margin: 70px auto;
-  box-shadow: 0 2px 0 rgb(133, 104, 250);
+  box-shadow: 0 2px 0 gray;
   border-radius: 6px;
   overflow: hidden;
 }
@@ -130,8 +131,9 @@ svg {
     /* text-indent: -2em; */
   }
   .counter-score {
-    border: .25rem double gray;
+    /* border: .25rem inset rgb(237, 231, 228); */
     /* text-indent: -15em; */
+    /* margin-bottom: -1rem; */
   }
 
   .player-name {
@@ -248,8 +250,8 @@ svg {
     flex-grow: 1;
     text-align: center;
     font-family: monospace;
-    font-size: 2em;
-    line-height: 2em;
+    font-size: 3em;
+    line-height: 1em;
   }
 
   .logo {
@@ -261,7 +263,7 @@ svg {
     font-size: 2rem;
     position: absolute;
     text-indent: 20rem;
-    padding-top: .5rem;
+    padding-top: .25rem;
   }
 
   .songLink:after {

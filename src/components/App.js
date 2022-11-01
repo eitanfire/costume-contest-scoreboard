@@ -7,7 +7,7 @@ class App extends Component {
   state = {
     players: [
       {
-        name: "Henri",
+        name: "Olivia",
         score: 0,
         id: 1,
         song:   
@@ -16,13 +16,13 @@ class App extends Component {
           role='button'
           className='btn'
           // Walk on song
-          href='' 
+          href='https://youtu.be/yL75mtNZ6PA' 
           target="_blank" rel="noopener noreferrer">🎵
         </a>
         </div>
       },
       {
-        name: "Treasure",
+        name: "Aaron Z",
         score: 0,
         id: 2,
         song:   
@@ -37,8 +37,8 @@ class App extends Component {
         </div>
       },
       {
-        name: "Ashley",
-        score: 0,
+        name: "Andy D",
+        score: 14.4,
         id: 3,
         song:   
           <div className='songLink'>
@@ -46,15 +46,60 @@ class App extends Component {
           role='button'
           className='btn'
           // Walk on song
-          href='' 
+          href='https://youtu.be/TNi6PJpB3JU' 
           target="_blank" rel="noopener noreferrer">🎵
         </a>
         </div>
       },
       {
-        name: "James",
-        score: 0,
+        name: "Zachary",
+        score: 10,
         id: 4,
+        song:   
+          <div className='songLink'>
+          <a
+          role='button'
+          className='btn'
+          // Walk on song
+          href='https://www.youtube.com/watch?v=lYYyPm7q5C8' 
+          target="_blank" rel="noopener noreferrer">🎵
+        </a>
+        </div>
+      },
+      {
+        name: "Noa",
+        score: 12.6,
+        id: 5,
+        song:   
+          <div className='songLink'>
+          <a
+          role='button'
+          className='btn'
+          // Walk on song
+          href='https://www.youtube.com/watch?v=hgF1HI_kW6s' 
+          target="_blank" rel="noopener noreferrer">🎵
+        </a>
+        </div>
+      },
+      {
+        name: "Amber",
+        score: 13.24,
+        id: 6,
+        song:   
+          <div className='songLink'>
+          <a
+          role='button'
+          className='btn'
+          // Walk on song
+          href='https://youtu.be/O0n-9X1MuMQ' 
+          target="_blank" rel="noopener noreferrer">🎵
+        </a>
+        </div>
+      },
+      {
+        name: "Jay",
+        score: 0,
+        id: 7,
         song:   
           <div className='songLink'>
           <a
@@ -66,6 +111,133 @@ class App extends Component {
         </a>
         </div>
       }
+      ,
+      {
+        name: "Malakai",
+        score: 12.46,
+        id: 8,
+        song:   
+          <div className='songLink'>
+          <a
+          role='button'
+          className='btn'
+          // Walk on song
+          href='https://youtu.be/6xUnSVTh8fI' 
+          target="_blank" rel="noopener noreferrer">🎵
+        </a>
+        </div>
+      }
+      ,
+      {
+        name: "Nicholas",
+        score: 13.2,
+        id: 9,
+        song:   
+          <div className='songLink'>
+          <a
+          role='button'
+          className='btn'
+          // Walk on song
+          href='https://youtu.be/NTa6Xbzfq1U' 
+          target="_blank" rel="noopener noreferrer">🎵
+        </a>
+        </div>
+      },
+      {
+        name: "Sam",
+        score: 13.5,
+        id: 10,
+        song:   
+          <div className='songLink'>
+          <a
+          role='button'
+          className='btn'
+          // Walk on song
+          href='https://youtu.be/MfrC8PAQtlg' 
+          target="_blank" rel="noopener noreferrer">🎵
+        </a>
+        </div>
+      }
+      ,
+      {
+        name: "Brook",
+        score: 15.8,
+        id: 11,
+        song:   
+          <div className='songLink'>
+          <a
+          role='button'
+          className='btn'
+          // Walk on song
+          href='https://youtu.be/CKti7QixnJI' 
+          target="_blank" rel="noopener noreferrer">🎵
+        </a>
+        </div>
+      }
+      ,
+      {
+        name: "Jeremiah",
+        score: 12.4,
+        id: 12,
+        song:   
+          <div className='songLink'>
+          <a
+          role='button'
+          className='btn'
+          // Walk on song
+          href='https://youtu.be/LOZuxwVk7TU' 
+          target="_blank" rel="noopener noreferrer">🎵
+        </a>
+        </div>
+      }
+      ,
+      {
+        name: "Jackie",
+        score: 0,
+        id: 13,
+        song:   
+          <div className='songLink'>
+          <a
+          role='button'
+          className='btn'
+          // Walk on song
+          href='https://youtu.be/GI6dOS5ncFc' 
+          target="_blank" rel="noopener noreferrer">🎵
+        </a>
+        </div>
+      }
+      ,
+       {
+         name: "Kyla",
+         score: 15.2,
+        id: 12,
+         song:   
+           <div className='songLink'>
+           <a
+           role='button'
+           className='btn'
+           // Walk on song
+           href='' 
+           target="_blank" rel="noopener noreferrer">🎵
+        </a>
+         </div>
+       }
+      ,
+      // {
+      //   name: "Draco",
+      //   score: 0,
+      //   id: 12,
+      //   song:   
+      //     <div className='songLink'>
+      //     <a
+      //     role='button'
+      //     className='btn'
+      //     // Walk on song
+      //     href='' 
+      //     target="_blank" rel="noopener noreferrer">🎵
+      //   </a>
+      //   </div>
+      // }
     ]
   };
 
@@ -146,7 +318,7 @@ class App extends Component {
             key={player.id.toString()} 
             index={index}
             changeScore={this.handleScoreChange}
-            removePlayer={this.handleRemovePlayer}
+            // removePlayer={this.handleRemovePlayer}
             isHighScore={highScore === player.score}           
           />
         )}

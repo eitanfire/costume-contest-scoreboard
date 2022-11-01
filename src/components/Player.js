@@ -8,7 +8,7 @@ class Player extends PureComponent {
 
  static propTypes = {
   changeScore: PropTypes.func,
-  removePlayer: PropTypes.func,
+  // removePlayer: PropTypes.func,
   name: PropTypes.string.isRequired,
   score: PropTypes.number.isRequired,
   id: PropTypes.number,
@@ -30,9 +30,9 @@ class Player extends PureComponent {
     <div className="player">
               <span className='songLink'>{song}</span>
       <span className="player-name">
-        <button className="remove-player" onClick={() => removePlayer(id)}>
-          ✖
-        </button>
+        {/* <button className="remove-player" onClick={() => removePlayer(id)}> */}
+          {/* ✖
+        </button> */}
           <Icon isHighScore={this.props.isHighScore}/>
         {name}
       </span>

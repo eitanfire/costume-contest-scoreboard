@@ -130,6 +130,15 @@ svg {
     /* border: 100% double maroon; */
     /* text-indent: -2em; */
   }
+  /* .player-name:hover
+   {
+    background:
+
+    radial-gradient(ellipse at top, gray, transparent),
+    radial-gradient(ellipse at bottom, #fc6767, transparent);
+    background-size: 500px;
+
+  } */
   .counter-score {
     /* border: .25rem inset rgb(237, 231, 228); */
     /* text-indent: -15em; */
@@ -144,17 +153,17 @@ svg {
     font-family: "Creepster";
   }
 
-  .remove-player {
+  /* .remove-player {
     font-size: .33em;
     border: none;
     outline: none;
     visibility: hidden;
     color: #EF5350;
     cursor: pointer;
-    margin: 0 10px 0 0;
+    margin: 0 20px 0 0;
     padding: 0;
     background: none;
-  }
+  } */
 
 .stats,
 .stopwatch {
@@ -257,6 +266,8 @@ svg {
   .logo {
     max-width: 42%;
     height: auto;
+    /* box-shadow: 0 2px 0 gray; */
+    border: .15rem inset rgb(162, 162, 179);
   }
 
   .songLink {

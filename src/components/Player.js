@@ -12,7 +12,7 @@ class Player extends PureComponent {
   name: PropTypes.string.isRequired,
   score: PropTypes.number.isRequired,
   id: PropTypes.number,
-  song: PropTypes.string.isRequired,
+  song: PropTypes.object.isRequired,
   index: PropTypes.number
  }
 
@@ -28,7 +28,7 @@ class Player extends PureComponent {
     } = this.props
   return (
     <div className="player">
-              <span className='songLink'>{song}</span>
+              <span className='songLink' song="song">{song}</span>
       <span className="player-name">
         {/* <button className="remove-player" onClick={() => removePlayer(id)}> */}
           {/* ✖

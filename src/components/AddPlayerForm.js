@@ -14,19 +14,22 @@ class AddPlayerForm extends Component {
 
     return (
       <form onSubmit={this.handleSubmit}>
-        <input 
+        <input
           type="text"
           ref={this.playerInput}
-          placeholder="Enter a participants' name"
+          placeholder="Enter name"
         />
-        
-        <input 
-          type="submit"
-          value="Add Participant"
+        {/* <label for="url">Enter an https:// URL:</label> */}
+        <input
+          // className="songLink"
+          type="url"
+          ref={this.playerInput}
+          placeholder="Walk on Song"
         />
+        <input type="submit" value="Add Participant" />
       </form>
     );
   }
 }
 
-// export default AddPlayerForm;
+export default AddPlayerForm;

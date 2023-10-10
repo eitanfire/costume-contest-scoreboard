@@ -4,13 +4,13 @@ import AddItem from './components/AddItem';
 import ListItem from './components/ListItem';
 import './App.css';
 
-const initState = {
-    items: [
-        { id: uuid(), name: 'milk' },
-        { id: uuid(), name: 'coffee' },
-        { id: uuid(), name: 'mochi' }
-    ]
-};
+// const initState = {
+//     items: [
+//         { id: uuid(), name: 'milk' },
+//         { id: uuid(), name: 'coffee' },
+//         { id: uuid(), name: 'mochi' }
+//     ]
+// };
 
 const listReducer = (state, action) => {
     console.log(action);
@@ -59,5 +59,3 @@ function InputScore() {
 }
 
 export default InputScore;
-
-// Original code by Chris Kubick with modifications by Minae Lee, 2022

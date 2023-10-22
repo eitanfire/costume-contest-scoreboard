@@ -1,58 +1,49 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from "react";
 
-class Stopwatch extends Component {
+const Stopwatch = () => {
+  const [isRunning, setIsRunning] = useState(false);
+  const [elapsedTime, setElapsedTime] = useState(0);
+  const [previousTime, setPreviousTime] = useState(0);
 
-  state = {
-    isRunning: false,
-    elapsedTime: 0,
-    previousTime: 0
+  useEffect(() => {
+    const intervalID = setInterval(() => tick(), 100);
+
+    return () => {
+      clearInterval(intervalID);
+    };
+  }, []);
+
+  const tick = () => {
+    if (isRunning) {
+      const now = Date.now();
+      setPreviousTime(now);
+      setElapsedTime(
+        (prevElapsedTime) => prevElapsedTime + (now - previousTime)
+      );
+    }
   };
 
-  componentDidMount() {
-    this.intervalID = setInterval(() => this.tick(), 100);
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.intervalID);
-  }
-
-  tick = () => {
-    if (this.state.isRunning) {
-      const now = Date.now();
-      this.setState( prevState => ({
-        previousTime: now,
-        elapsedTime: prevState.elapsedTime + (now - this.state.previousTime)
-      }));
+  const handleStopwatch = () => {
+    setIsRunning(!isRunning);
+    if (!isRunning) {
+      setPreviousTime(Date.now());
     }
-  }
-  
-  handleStopwatch = () => {
-    this.setState( prevState => ({
-      isRunning: !prevState.isRunning
-    }));
-    if (!this.state.isRunning) {
-      this.setState({ previousTime: Date.now() });
-    }
-  }
+  };
 
-  handleReset = () => {
-    this.setState({ elapsedTime: 0 });
-  }
+  const handleReset = () => {
+    setElapsedTime(0);
+  };
 
-  render() {
-    const seconds = Math.floor(this.state.elapsedTime / 1000);
+  const seconds = Math.floor(elapsedTime / 1000);
 
-    return (
-      <div className="stopwatch">
-        <h2>Stopwatch</h2>
-        <span className="stopwatch-time">{ seconds }</span>
-        <button onClick={this.handleStopwatch}>
-          { this.state.isRunning ? 'Stop' : 'Start' }
-        </button>
-        <button onClick={this.handleReset}>Reset</button>
-      </div>
-    );
-  }
-}
+  return (
+    <div className="stopwatch">
+      <h2>Stopwatch</h2>
+      <span className="stopwatch-time">{seconds}</span>
+      <button onClick={handleStopwatch}>{isRunning ? "Stop" : "Start"}</button>
+      <button onClick={handleReset}>Reset</button>
+    </div>
+  );
+};
 
 export default Stopwatch;

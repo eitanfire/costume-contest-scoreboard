@@ -1,46 +1,40 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import Counter from './Counter';
-import Icon from './Icon';
-import "@fontsource/creepster";
+import React from "react";
+import PropTypes from "prop-types";
+import Counter from "./Counter";
+import Icon from "./Icon";
 
-class Player extends PureComponent {
-
- static propTypes = {
-  changeScore: PropTypes.func,
-  // removePlayer: PropTypes.func,
-  name: PropTypes.string.isRequired,
-  score: PropTypes.number.isRequired,
-  id: PropTypes.number,
-  song: PropTypes.object.isRequired,
-  index: PropTypes.number
- }
-
- render() {
-    const {
-      name,
-      id,
-      song,
-      score,
-      index,
-      removePlayer,
-      changeScore
-    } = this.props
+const Player = ({
+  name,
+  id,
+  song,
+  score,
+  index,
+  removePlayer,
+  changeScore,
+  isHighScore,
+}) => {
   return (
     <div className="player">
-              <span className='songLink' song="song">{song}</span>
+      <span className="songLink" song="song">
+        {song}
+      </span>
       <span className="player-name">
-        {/* <button className="remove-player" onClick={() => removePlayer(id)}> */}
-          {/* ✖
-        </button> */}
-          <Icon isHighScore={this.props.isHighScore}/>
+        <Icon isHighScore={isHighScore} />
         {name}
       </span>
       <Counter score={score} index={index} changeScore={changeScore} />
     </div>
   );
-}
-}
+};
 
+Player.propTypes = {
+  changeScore: PropTypes.func,
+  name: PropTypes.string.isRequired,
+  score: PropTypes.number.isRequired,
+  id: PropTypes.number,
+  song: PropTypes.object.isRequired,
+  index: PropTypes.number,
+  isHighScore: PropTypes.bool,
+};
 
 export default Player;

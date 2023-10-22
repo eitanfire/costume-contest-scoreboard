@@ -1,35 +1,20 @@
-import React, { Component } from 'react';
+import React, { useRef } from "react";
 
-class AddPlayerForm extends Component {
+function AddPlayerForm({ addPlayer }) {
+  const playerInput = useRef();
 
-  playerInput = React.createRef();
-
-  handleSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    this.props.addPlayer(this.playerInput.current.value);
+    addPlayer(playerInput.current.value, "");
     e.currentTarget.reset();
-  }
+  };
 
-  render() {
-
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <input
-          type="text"
-          ref={this.playerInput}
-          placeholder="Enter name"
-        />
-        {/* <label for="url">Enter an https:// URL:</label> */}
-        <input
-          // className="songLink"
-          type="url"
-          ref={this.playerInput}
-          placeholder="Walk on Song"
-        />
-        <input type="submit" value="Add Participant" />
-      </form>
-    );
-  }
+  return (
+    <form onSubmit={handleSubmit}>
+      <input type="text" ref={playerInput} placeholder="Enter name" />
+      <input type="submit" value="Add Participant" />
+    </form>
+  );
 }
 
 export default AddPlayerForm;

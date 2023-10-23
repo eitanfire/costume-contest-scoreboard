@@ -8,7 +8,8 @@ const Header = ({ players, title }) => {
     <header>
       <img className="logo" src={require("./assets/logo.jpg")} alt="Logo" />
       <Stats players={players} />
-      <Stopwatch />
+      {/* <Stopwatch /> */}
+      {title}
     </header>
   );
 };

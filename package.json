@@ -6,8 +6,8 @@
     "@fontsource/creepster": "^4.5.7",
     "formik": "^2.2.9",
     "prop-types": "^15.7.2",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-scripts": "^1.1.5"
   },
   "scripts": {

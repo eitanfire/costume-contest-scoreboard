@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import Header from "./Header";
 import Player from "./Player";
 import AddPlayerForm from "./AddPlayerForm";
+import {playerData}  from "../playerData";
 
 function App() {
-  const [players, setPlayers] = useState([
-    // Your initial player data here
-  ]);
+  const [players, setPlayers] = useState(playerData.players);
 
   // Player id counter
   const prevPlayerId = 4;
@@ -64,7 +63,7 @@ function App() {
             key={player.id.toString()}
             index={index}
             changeScore={handleScoreChange}
-            // removePlayer={handleRemovePlayer}
+            removePlayer={handleRemovePlayer}
             isHighScore={highScore === player.score}
           />
         ))}

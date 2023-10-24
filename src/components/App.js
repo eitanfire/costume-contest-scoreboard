@@ -1,11 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import Player from "./Player";
+import PlayerAccordion from "./PlayerAccordion";
 import AddPlayerForm from "./AddPlayerForm";
-import {playerData}  from "../playerData";
+import { playerData } from "../playerData";
 
 function App() {
-  const [players, setPlayers] = useState(playerData.players);
+  // Step 1: Load player data from local storage
+  const [players, setPlayers] = useState(() => {
+    const storedPlayers = localStorage.getItem("players");
+    return storedPlayers ? JSON.parse(storedPlayers) : playerData.players;
+  });
 
   // Player id counter
   const prevPlayerId = 4;
@@ -46,6 +51,11 @@ function App() {
     setPlayers((prevState) => prevState.filter((p) => p.id !== id));
   };
 
+  // Step 2: Save player data to local storage whenever it changes
+  useEffect(() => {
+    localStorage.setItem("players", JSON.stringify(players));
+  }, [players]);
+
   const highScore = getHighScore();
 
   return (
@@ -55,7 +65,7 @@ function App() {
       {players
         .sort((a, b) => b.score - a.score)
         .map((player, index) => (
-          <Player
+          <PlayerAccordion
             name={player.name}
             score={player.score}
             song={player.song}

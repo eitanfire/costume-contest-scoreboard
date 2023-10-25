@@ -285,3 +285,13 @@ svg {
     font-size: 1rem;
     background-color: #E55B13;
   }
+
+  /* Initial state: video container is hidden */
+.video-container {
+  display: none;
+}
+
+/* Apply this class to make the video container visible */
+.video-container.visible {
+  display: block;
+}

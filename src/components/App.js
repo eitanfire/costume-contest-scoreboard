@@ -65,7 +65,7 @@ function App() {
       {players
         .sort((a, b) => b.score - a.score)
         .map((player, index) => (
-          <PlayerAccordion
+          <Player
             name={player.name}
             score={player.score}
             song={player.song}

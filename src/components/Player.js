@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Counter from "./Counter";
 import Icon from "./Icon";
@@ -13,8 +13,20 @@ const Player = ({
   changeScore,
   isHighScore,
 }) => {
+  const [manualScore, setManualScore] = useState(score);
+
   const handleRemovePlayer = () => {
     removePlayer(id); // Pass the correct ID to removePlayer
+  };
+
+  const handleManualScoreChange = (e) => {
+    // Update the manual score in the component's state
+    setManualScore(parseInt(e.target.value, 10));
+  };
+
+  const handleUpdateScore = () => {
+    // Call the changeScore function to update the score in App state
+    changeScore(index, manualScore);
   };
 
   return (
@@ -36,6 +48,15 @@ const Player = ({
         🎸
       </a>
       <Counter score={score} index={index} changeScore={changeScore} />
+      <div>
+        {/* Input field for manual score */}
+        <input
+          type="number"
+          value={manualScore}
+          onChange={handleManualScoreChange}
+        />
+        <button onClick={handleUpdateScore}>Update Score</button>
+      </div>
     </div>
   );
 };

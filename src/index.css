@@ -106,7 +106,6 @@ svg {
 /* COMPONENT STYLES -------------------- */
 .scoreboard {
   background: #fff;
-  width: 700px;
   margin: 70px auto;
   box-shadow: 0 2px 0 gray;
   border-radius: 6px;

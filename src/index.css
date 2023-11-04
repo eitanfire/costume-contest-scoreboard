@@ -1,10 +1,8 @@
 /* ELEMENT STYLES -------------------- */
 body {
   background: #e8e7e7; 
-  /* font-family: arial; */
   text-transform: uppercase;
   font-weight: 400;
-  /* font-size: 1.5rem; */
   margin-top: -4rem;
 }
 
@@ -133,15 +131,7 @@ svg {
     /* border: 100% double maroon; */
     /* text-indent: -2em; */
   }
-  /* .player-name:hover
-   {
-    background:
-
-    radial-gradient(ellipse at top, gray, transparent),
-    radial-gradient(ellipse at bottom, #fc6767, transparent);
-    background-size: 500px;
-
-  } */
+  
   .counter-score {
     /* border: .25rem inset rgb(237, 231, 228); */
     /* text-indent: -15em; */

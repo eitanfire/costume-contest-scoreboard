@@ -1,12 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Stats from "./Stats";
-import Stopwatch from "./Stopwatch";
+// import Stopwatch from "./Stopwatch";
 
 const Header = ({ players, title }) => {
   return (
     <header>
-      <img className="logo" src={require("./assets/logo.jpg")} alt="Logo" />
+      <img
+        className="logo"
+        src={require("./assets/Halloween-costume-contest.png")}
+        alt="Logo"
+      />
       <Stats players={players} />
       {/* <Stopwatch /> */}
       {title}

@@ -47,9 +47,9 @@ function App() {
     ]);
   };
 
-  const handleRemovePlayer = (id) => {
-    setPlayers((prevState) => prevState.filter((p) => p.id !== id));
-  };
+  // const handleRemovePlayer = (id) => {
+  //   setPlayers((prevState) => prevState.filter((p) => p.id !== id));
+  // };
 
   // Step 2: Save player data to local storage whenever it changes
   useEffect(() => {
@@ -73,7 +73,7 @@ function App() {
             key={player.id.toString()}
             index={index}
             changeScore={handleScoreChange}
-            removePlayer={handleRemovePlayer}
+            // removePlayer={handleRemovePlayer}
             isHighScore={highScore === player.score}
           />
         ))}

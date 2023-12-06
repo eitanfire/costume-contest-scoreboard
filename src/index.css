@@ -16,7 +16,7 @@ header {
   background-color: orange;
   border-bottom: solid 2px #D4CAFF;
   font-size: 1.2rem;
-  background-position: 55% 75%;
+  background-position: 95% 85%;
 }
 
 header h1 {
@@ -85,8 +85,8 @@ input[type=submit] {
 
 /* ICONS */
 svg {
-  width: 28px;
-  height: 19px;
+  width: 50px;
+  height: 27px;
   margin-right: 5px;
   fill: #F0F0F0;
 }
@@ -133,9 +133,9 @@ svg {
   }
   
   .counter-score {
-    /* border: .25rem inset rgb(237, 231, 228); */
+    border: .25rem inset rgb(237, 231, 228);
     /* text-indent: -15em; */
-    /* margin-bottom: -1rem; */
+    margin-bottom: -1rem;
   }
 
   .player-name {
@@ -160,13 +160,14 @@ svg {
 
 .stats,
 .stopwatch {
-  width: 170px;
+  width: 300px;
 }
 
 .stats {
   display: flex;
   margin: 0 0 0 28px;
-  font-weight: normal;
+  font-weight: bold;
+  font-size: 2rem;
 }
 
   .stats td:first-child {
@@ -260,20 +261,25 @@ svg {
     max-width: 42%;
     height: auto;
     /* box-shadow: 0 2px 0 gray; */
-    border: .15rem inset rgb(162, 162, 179);
-  }
+    /* border: .15rem inset rgb(162, 162, 179); */
+backdrop-filter: blur(1.5px);  
 
-  .songLink {
-    font-size: 2rem;
-    position: absolute;
+}
+
+.btn {
+      font-size: 2.5rem;
+text-indent: 5rem;
+}
+  /* .songLink {
+    position: sticky;
     text-indent: 20rem;
     padding-top: .25rem;
-  }
+  } */
 
-  .songLink:after {
+  /* .songLink:after {
     font-size: 1rem;
     background-color: #E55B13;
-  }
+  } */
 
   /* Initial state: video container is hidden */
 .video-container {
@@ -283,4 +289,8 @@ svg {
 /* Apply this class to make the video container visible */
 .video-container.visible {
   display: block;
+}
+
+.counter {
+  font-size: larger;
 }

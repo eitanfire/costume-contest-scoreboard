@@ -15,9 +15,9 @@ const Player = ({
 }) => {
   const [manualScore, setManualScore] = useState(score);
 
-  const handleRemovePlayer = () => {
-    removePlayer(id); // Pass the correct ID to removePlayer
-  };
+  // const handleRemovePlayer = () => {
+  //   removePlayer(id);
+  // };
 
   const handleManualScoreChange = (e) => {
     // Update the manual score in the component's state
@@ -32,9 +32,9 @@ const Player = ({
   return (
     <div className="player">
       <span className="player-name">
-        <button className="remove-player" onClick={handleRemovePlayer}>
+        {/* <button className="remove-player" onClick={handleRemovePlayer}>
           ✖
-        </button>
+        </button> */}
         <Icon isHighScore={isHighScore} />
         {name}
       </span>
@@ -47,7 +47,7 @@ const Player = ({
       >
         🎸
       </a>
-      <Counter score={score} index={index} changeScore={changeScore} />
+      <Counter className="counter" score={score} index={index} changeScore={changeScore} />
       <div>
         {/* Input field for manual score */}
         <input

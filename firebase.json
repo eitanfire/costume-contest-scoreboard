@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "costume-contest-scoreboard-89001",
+    "public": "build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

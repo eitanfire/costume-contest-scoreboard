@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@fontsource/creepster": "^4.5.7",
+    "firebase": "^10.8.0",
     "formik": "^2.2.9",
     "prop-types": "^15.7.2",
     "react": "^18.2.0",

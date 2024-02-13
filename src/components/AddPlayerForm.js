@@ -16,7 +16,6 @@ function AddPlayerForm({ addPlayer }) {
     <form onSubmit={handleSubmit}>
       <input type="text" ref={playerInput} placeholder="Enter name" />
       <input type="url" ref={urlInput} placeholder="Enter URL" />{" "}
-      {/* Add the URL input field */}
       <input type="submit" value="Add Participant" />
     </form>
   );

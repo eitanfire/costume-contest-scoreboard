@@ -146,7 +146,7 @@ svg {
     font-family: "Creepster";
   }
 
-  /* .remove-player {
+  .remove-player {
     font-size: .33em;
     border: none;
     outline: none;
@@ -156,7 +156,7 @@ svg {
     margin: 0 20px 0 0;
     padding: 0;
     background: none;
-  } */
+  }
 
 .stats,
 .stopwatch {

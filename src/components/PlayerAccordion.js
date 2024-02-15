@@ -18,7 +18,7 @@ function PlayerAccordion({ id, name, song, score, isHighScore }) {
           new window.YT.Player("player", {
             height: "315",
             width: "560",
-            videoId: song, // Assuming `song` contains the video ID
+            videoId: song,
             playerVars: {
               autoplay: 0, // You can set this to 1 for autoplay
             },

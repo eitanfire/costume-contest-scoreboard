@@ -47,7 +47,12 @@ const Player = ({
       >
         🎸
       </a>
-      <Counter className="counter" score={score} index={index} changeScore={changeScore} />
+      <Counter
+        className="counter"
+        score={score}
+        index={index}
+        changeScore={changeScore}
+      />
       <div>
         {/* Input field for manual score */}
         <input

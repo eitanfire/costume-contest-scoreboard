@@ -6,14 +6,10 @@ import AddPlayerForm from "./AddPlayerForm";
 import { playerData } from "../playerData";
 
 function App() {
-  // Step 1: Load player data from local storage
   const [players, setPlayers] = useState(() => {
     const storedPlayers = localStorage.getItem("players");
     return storedPlayers ? JSON.parse(storedPlayers) : playerData.players;
   });
-
-  // Player id counter
-  const prevPlayerId = 4;
 
   const getHighScore = () => {
     const scores = players.map((p) => p.score);
@@ -42,7 +38,7 @@ function App() {
         name,
         song,
         score: 0,
-        id: prevPlayerId + 1,
+        id: Math.max(...prevState.map((player) => player.id), 0) + 1,
       },
     ]);
   };
@@ -51,7 +47,6 @@ function App() {
     setPlayers((prevState) => prevState.filter((p) => p.id !== id));
   };
 
-  // Step 2: Save player data to local storage whenever it changes
   useEffect(() => {
     localStorage.setItem("players", JSON.stringify(players));
   }, [players]);
@@ -70,7 +65,7 @@ function App() {
             score={player.score}
             song={player.song}
             id={player.id}
-            key={player.id ? player.id.toString() : index}
+            key={player.id.toString()}
             index={index}
             changeScore={handleScoreChange}
             removePlayer={handleRemovePlayer}

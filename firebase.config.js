@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyD8z_Ar10s7CMRQfmbmifkpw27HN_r0o4s",
-  authDomain: "halloween-costume-leaderboard.firebaseapp.com",
-  projectId: "halloween-costume-leaderboard",
-  storageBucket: "halloween-costume-leaderboard.appspot.com",
-  messagingSenderId: "249923750002",
-  appId: "1:249923750002:web:1548cb567db9e94b81daeb",
+  apiKey: "AIzaSyCL03vaDlaUFv_BC04t-SWf15wPPsoVEmY",
+  authDomain: "halloween-costume-scoreboard.firebaseapp.com",
+  projectId: "halloween-costume-scoreboard",
+  storageBucket: "halloween-costume-scoreboard.appspot.com",
+  messagingSenderId: "1384092617",
+  appId: "1:1384092617:web:a9306b0965cc26f0bc0e18",
 };
 
 // Initialize Firebase

@@ -45,7 +45,7 @@ const Player = ({
         target="_blank"
         rel="noopener noreferrer"
       >
-        🎸
+        <span role="img" alt="play video">🎸</span>
       </a>
       <Counter
         className="counter"

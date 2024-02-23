@@ -77,7 +77,7 @@ const [players, setPlayers] = useState(() => {
             score={player.score}
             song={player.song}
             id={player.id}
-            key={player.id.toString()}
+            key={player.id ? player.id.toString() : index}
             index={index}
             changeScore={handleScoreChange}
             removePlayer={handleRemovePlayer}

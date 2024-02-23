@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Counter from "./Counter";
 import Icon from "./Icon";
+import { Container, Col, Row } from "reactstrap";
 
 const Player = ({
   name,
@@ -30,14 +31,14 @@ const Player = ({
   };
 
   return (
-    <div className="player">
-      <span className="player-name">
+    <Container className="player">
+      <Col className="player-name col">
         <button className="remove-player" onClick={handleRemovePlayer}>
           ✖
         </button>
         <Icon isHighScore={isHighScore} />
         {name}
-      </span>
+      </Col>
       <a
         role="button"
         className="btn"
@@ -62,7 +63,7 @@ const Player = ({
         />
         <button onClick={handleUpdateScore}>Update Score</button>
       </div>
-    </div>
+    </Container>
   );
 };
 

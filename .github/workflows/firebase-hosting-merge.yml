@@ -15,6 +15,8 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_COSTUME_CONTEST_SCOREBOARD }}'
+          firebaseServiceAccount: >-
+            ${{ secrets.FIREBASE_SERVICE_ACCOUNT_HALLOWEEN_CONTEST_LEADERBOARD
+            }}
           channelId: live
-          projectId: costume-contest-scoreboard
+          projectId: halloween-contest-leaderboard

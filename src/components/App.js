@@ -6,22 +6,23 @@ import AddPlayerForm from "./AddPlayerForm";
 import { playerData } from "../playerData";
 
 function App() {
-const [players, setPlayers] = useState(() => {
-  const storedPlayers = localStorage.getItem("players");
+  const [players, setPlayers] = useState(() => {
+    const storedPlayers = localStorage.getItem("players");
 
-  if (storedPlayers) {
-    try {
-      const parsedPlayers = JSON.parse(storedPlayers);
-      return Array.isArray(parsedPlayers) ? parsedPlayers : playerData.players;
-    } catch (error) {
-      console.error("Error parsing stored players:", error);
+    if (storedPlayers) {
+      try {
+        const parsedPlayers = JSON.parse(storedPlayers);
+        return Array.isArray(parsedPlayers)
+          ? parsedPlayers
+          : playerData.players;
+      } catch (error) {
+        console.error("Error parsing stored players:", error);
+        return playerData.players;
+      }
+    } else {
       return playerData.players;
     }
-  } else {
-    return playerData.players;
-  }
-});
-
+  });
 
   const getHighScore = () => {
     const scores = players.map((p) => p.score);

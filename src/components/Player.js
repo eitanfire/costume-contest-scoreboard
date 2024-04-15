@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import Counter from "./Counter";
 import Icon from "./Icon";
-import { Container, Col, Row } from "reactstrap";
+import { Container, Col } from "reactstrap";
 
 const Player = ({
   name,
@@ -20,13 +19,18 @@ const Player = ({
     removePlayer(id);
   };
 
-  const handleManualScoreChange = (e) => {
-    // Update the manual score in the component's state
-    setManualScore(parseInt(e.target.value, 10));
+  const handleScoreClick = () => {
+    // Toggle between manual score input and display
+    setManualScore((prevScore) => (prevScore === score ? "" : score));
   };
 
-  const handleUpdateScore = () => {
-    // Call the changeScore function to update the score in App state
+  const handleManualScoreChange = (e) => {
+    // Update the manual score in the component's state
+    setManualScore(parseInt(e.target.value, 10) || 0);
+  };
+
+  const handleScoreBlur = () => {
+    // Call the changeScore function to update the score in App state when the input loses focus
     changeScore(index, manualScore);
   };
 
@@ -46,22 +50,22 @@ const Player = ({
         target="_blank"
         rel="noopener noreferrer"
       >
-        <span role="img" alt="play video">🎸</span>
+        <span role="img" alt="play video">
+          🎸
+        </span>
       </a>
-      <Counter
-        className="counter"
-        score={score}
-        index={index}
-        changeScore={changeScore}
-      />
-      <div>
-        {/* Input field for manual score */}
-        <input
-          type="number"
-          value={manualScore}
-          onChange={handleManualScoreChange}
-        />
-        <button onClick={handleUpdateScore}>Update Score</button>
+      <div className="counter" onClick={handleScoreClick}>
+        {manualScore !== "" ? (
+          <input
+            type="number"
+            value={manualScore}
+            onChange={handleManualScoreChange}
+            onBlur={handleScoreBlur}
+            onClick={(e) => e.stopPropagation()}
+          />
+        ) : (
+          <div>{score}</div>
+        )}
       </div>
     </Container>
   );

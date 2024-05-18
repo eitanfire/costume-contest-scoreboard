@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const Stats = (props) => {
   const totalPlayers = props.players.length;
   const totalPoints = props.players.reduce((total, player) => {
-    return total + player.score;
+    return total + (player.score || 0);
   }, 0);
 
   return (
@@ -16,7 +16,7 @@ const Stats = (props) => {
         </tr>
         <tr>
           <td>Total Points:</td>
-          <td>{totalPoints}</td>
+          <td>{isNaN(totalPoints) ? 0 : totalPoints}</td>
         </tr>
       </tbody>
     </table>
@@ -28,7 +28,7 @@ Stats.propTypes = {
     PropTypes.shape({
       score: PropTypes.number,
     })
-  ),
+  ).isRequired,
 };
 
 export default Stats;

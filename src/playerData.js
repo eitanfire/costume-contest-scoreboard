@@ -1,4 +1,4 @@
-let playerIdCounter = 1; // Initialize the player ID counter
+let playerIdCounter = 1;
 
 const playerData = {
   players: [
